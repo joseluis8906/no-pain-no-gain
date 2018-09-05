@@ -1,0 +1,27 @@
+{
+  "name": "no_pain_no_gain",
+  "version": "1.0.0",
+  "description": "Api Rest of no-pain-no-gain app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseluis8906/no-pain-no-gain.git"
+  },
+  "author": "Jose Luis Cáceres Escudero",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/joseluis8906/no-pain-no-gain/issues"
+  },
+  "homepage": "https://github.com/joseluis8906/no-pain-no-gain#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.13",
+    "nodemon": "^1.18.4"
+  }
+}

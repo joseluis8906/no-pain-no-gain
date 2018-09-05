@@ -1,0 +1,273 @@
+{
+	"variables": [],
+	"info": {
+		"name": "no-pain-no-gain",
+		"_postman_id": "beb63f86-2cfe-ab4a-0f22-bc0f6583b876",
+		"description": "Api Rest of no-pain-no-gain app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ciudad",
+			"description": "ciudad endpoint",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return all ciudades"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "session",
+								"value": "0kdfhal131341",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Bucaramanga\"\n}"
+						},
+						"description": "Create one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades/Medellin",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return one ciudad if exists"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades/Bogota",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Medellin\"\n}"
+						},
+						"description": "Update one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades/Bogota",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Delete one ciudad"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sede",
+			"description": "ciudad endpoint",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/sedes",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return all ciudades"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades/Barranquilla/sedes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Sede Barranquilla\"\n}"
+						},
+						"description": "Create one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/sedes/Sede Medellin",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return one ciudad if exists"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/sedes/Sede Medellin",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Sede Barranquilla\"\n}"
+						},
+						"description": "Update one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/sedes/Sede Barranquilla",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Delete one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "addUsuario",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/sedes/Sede Barranquilla/usuarios/usuario1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "add one ususario to sede"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"description": "ciudad endpoint",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/usuarios",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return all ciudades"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/usuarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"usuario1\",\n\t\"password\": \"123456\",\n\t\"roles\": [\"admin\"]\n}"
+						},
+						"description": "Create one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/ciudades/Medellin",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Return one ciudad if exists"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/usuarios/usuario1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"usuario1\",\n\t\"password\": \"123456\",\n\t\"roles\": [\"admin\", \"user\"]\n}"
+						},
+						"description": "Update one ciudad"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/private/usuarios/usuario1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Delete one ciudad"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
