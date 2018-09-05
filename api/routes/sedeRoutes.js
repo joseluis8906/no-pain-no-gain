@@ -1,10 +1,19 @@
 'use strict';
 
+var verifyJWTToken = require('../utils/middleware').verifyJWTToken;
 
 module.exports = function(app) {
   var sedeController = require('../controllers/sedeController');
 
-  // ciudad Routes
+  // routes session required
+  app.route('/api/v1/private/sedes').post(verifyJWTToken);
+  app.route('/api/v1/private/sedes/:nombre').put(verifyJWTToken);
+  app.route('/api/v1/private/sedes/:nombre').delete(verifyJWTToken);
+
+  app.route('/api/v1/private/sedes/:nombre').put(verifyJWTToken);
+  app.route('/api/v1/private/sedes/:nombre/usuarios').get(verifyJWTToken);
+
+  // Sede Routes
   app.route('/api/v1/private/sedes')
     .get(sedeController.listAll);
     
@@ -18,7 +27,6 @@ module.exports = function(app) {
 
   app.route('/api/v1/private/sedes/:nombre/usuarios/:username')
     .put(sedeController.addUsuario);
-
   app.route('/api/v1/private/sedes/:nombre/usuarios')
     .get(sedeController.getUsuarios);
 };

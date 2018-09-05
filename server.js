@@ -23,6 +23,9 @@ sedeRoutes(app);
 //rutas usuario
 var usuarioRoutes = require('./api/routes/usuarioRoutes');
 usuarioRoutes(app);
+//rutas auth
+var authRoutes = require('./api/routes/authRoutes');
+authRoutes(app);
 
 app.listen(port);
 console.log('Rest Api Server listen on port: ' + port);
