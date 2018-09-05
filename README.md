@@ -7,6 +7,9 @@ Para instalar las dependencias
 Para ejecutar el api-service
 * npm run start
 
+# --Dependencias
+Mongodb con una database de nombre NO_PAIN_NO_GAIN
+
 # --Requerimientos
 
 1). (Solucionado) Crear un modelo de datos para soportar los requerimientos del gimnasio usando MongoDB.
