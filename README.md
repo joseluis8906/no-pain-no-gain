@@ -8,6 +8,7 @@ Para ejecutar el api-service
 * npm run start
 
 --Requerimientos
+
 1). (Solucionado) Crear un modelo de datos para soportar los requerimientos del gimnasio usando MongoDB.
 
 2). (Sin Implementar) Crear un endpoint que permita al usuario admin iniciar sesión.
