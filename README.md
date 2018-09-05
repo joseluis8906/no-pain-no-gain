@@ -24,3 +24,4 @@ Para ejecutar el api-service
 7). (Sin Implementar) Agregar por lo menos 3 pruebas unitarias usando Jest.
 
 8). (Solucionado) Crear una colección usando Postman (https://www.getpostman.com/)  que tenga el consumo de los     endpoints: https://www.getpostman.com/collections/685e71c36736ad763d90
+
