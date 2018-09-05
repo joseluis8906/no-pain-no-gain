@@ -7,7 +7,7 @@ Para instalar las dependencias
 Para ejecutar el api-service
 * npm run start
 
---Requerimientos
+# --Requerimientos
 
 1). (Solucionado) Crear un modelo de datos para soportar los requerimientos del gimnasio usando MongoDB.
 
@@ -27,7 +27,7 @@ Para ejecutar el api-service
 
 
 
-Usage:
+# --Usage:
 
 1). Crear dos usuarios con el metodo postman usuario/create, uno con role='admin' y otro con role='user';
 
