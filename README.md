@@ -25,3 +25,23 @@ Para ejecutar el api-service
 
 8). (Solucionado) Crear una colección usando Postman (https://www.getpostman.com/)  que tenga el consumo de los     endpoints: https://www.getpostman.com/collections/685e71c36736ad763d90
 
+
+
+Usage:
+
+1). Crear dos usuarios con el metodo postman usuario/create, uno con role='admin' y otro con role='user';
+
+2). Hacer login con el metodo postman auth/create y enviar los parametros de un usuario en especifico; copiar el toquen devuelto en el header "x-access-token".
+
+-- Las siguientes peticiones deben tener definido el header x-access-token con el valor capturado en el metodo auth/create
+
+3). Crear una ciudad con el metodo postman ciudad/create
+
+4). Crear una sede con el metodo sede/create
+
+5). Asociar un usuario a una sede con el metodo sede/addUsuario
+
+6). Consultar la lista de usuarios con el metodo sede/getUsuarios
+
+-- Aclaración:
+Si al realizar una petición recibe una respuesta de permision denied, verifique que el token fue generado con un usuario de role='admin'
