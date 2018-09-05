@@ -87,12 +87,12 @@ exports.addUsuario = function(req, res) {
       Usuario.findOne({username: req.params.username}, function(err, usuario){
         if(err) res.send(err);
           if(usuario){
-            if(usuario.sedes.length < 2){
-              if(usuario.sedes.indexOf(sede._id) === -1){
-                usuario.sedes.push(sede._id);
-                Usuario.replaceOne({}, usuario, function(err, usuario){
+            if(sede.usuarios.length < 2){
+              if(sede.usuarios.indexOf(usuario._id) === -1){
+                sede.usuarios.push(usuario._id);
+                Sede.replaceOne({}, sede, function(err, sede){
                   if(err) res.send(err);
-                  res.json(usuario);
+                  res.json(sede);
                 });
               } else {
                 res.json(usuario);
@@ -109,3 +109,18 @@ exports.addUsuario = function(req, res) {
     }
   });
 };
+
+
+// get usuario by sede
+exports.getUsuarios = function(req, res) {
+  console.log('Sedes get usuarios');
+  Sede.findOne({nombre: req.params.nombre})
+    .populate('usuarios')
+    .exec(function(err, sede){
+      if(err) res.send(err);
+      
+      if(sede){
+        res.json(sede.usuarios);
+      }
+    });
+}

@@ -13,7 +13,8 @@ var SedeSchema = Schema({
     type: Schema.Types.ObjectId, 
     ref: 'Ciudad',
     required: true
-  }
+  },
+  usuarios: [{type: Schema.Types.ObjectId, ref: 'Usuario'}]
 });
 
 module.exports = mongoose.model('Sede', SedeSchema);

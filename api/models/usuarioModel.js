@@ -15,8 +15,7 @@ var UsuarioSchema = Schema({
     type: String,
     required: true
   },
-  roles: [{type: String, required: true}],
-  sedes: [{type: Schema.Types.ObjectId, ref: 'Ciudad'}]
+  roles: [{type: String, required: true}]
 });
 
 

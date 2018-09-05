@@ -18,4 +18,7 @@ module.exports = function(app) {
 
   app.route('/api/v1/private/sedes/:nombre/usuarios/:username')
     .put(sedeController.addUsuario);
+
+  app.route('/api/v1/private/sedes/:nombre/usuarios')
+    .get(sedeController.getUsuarios);
 };
