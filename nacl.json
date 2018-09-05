@@ -1,0 +1,27 @@
+[
+    {
+        "group": "admin",
+        "permissions": [
+            {
+                "resource": "*",
+                "methods": "*",
+                "action": "allow"
+            }
+        ]
+    },
+    {
+        "group": "user",
+        "permissions": [
+            {
+                "resource": "/api/v1/private/ciudades",
+                "methods": "*",
+                "action": "deny"
+            },
+            {
+                "resource": "/api/v1/private/sedes",
+                "methods": "*",
+                "action": "deny"
+            }
+        ]
+    }
+]

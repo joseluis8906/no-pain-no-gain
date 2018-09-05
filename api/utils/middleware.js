@@ -9,6 +9,7 @@ exports.verifyJWTToken = function (req, res, next) {
     let token = req.get('x-access-token');
     if(token === undefined){
         res.send('Session expired');
+        return;
     }
 
     jwt.verify(token, JWT_SECRET_KEY, (err, decodedToken) => 
@@ -18,6 +19,7 @@ exports.verifyJWTToken = function (req, res, next) {
         res.send('Access denied');
       }
 
-      next();
+      req.decoded = decodedToken.data;
+      return next();
     })
 }

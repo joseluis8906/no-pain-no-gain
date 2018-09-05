@@ -6,6 +6,21 @@ var Ciudad = require('./api/models/ciudadModel');
 var Sede = require('./api/models/sedeModel');
 var Usuario = require('./api/models/usuarioModel');
 var bodyParser = require('body-parser');
+const acl = require('express-acl');
+
+let configObject = {
+    filename: 'nacl.json',
+    path: '.',
+    decodedObjectName: 'decoded',
+    roleSearchPath: 'decoded.role'
+};
+   
+let responseObject = {
+    status: 'Access Denied',
+    message: 'You are not authorized to access this resource'
+};
+   
+acl.config(configObject, responseObject);
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);

@@ -1,5 +1,6 @@
 'use strict';
 
+var acl = require('express-acl');
 var verifyJWTToken = require('../utils/middleware').verifyJWTToken;
 
 module.exports = function(app) {
@@ -12,6 +13,7 @@ module.exports = function(app) {
 
   app.route('/api/v1/private/sedes/:nombre').put(verifyJWTToken);
   app.route('/api/v1/private/sedes/:nombre/usuarios').get(verifyJWTToken);
+  app.route(acl.authorize);
 
   // Sede Routes
   app.route('/api/v1/private/sedes')
