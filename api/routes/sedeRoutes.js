@@ -7,13 +7,14 @@ module.exports = function(app) {
   var sedeController = require('../controllers/sedeController');
 
   // routes session required
-  app.route('/api/v1/private/sedes').post(verifyJWTToken);
+  app.route('/api/v1/private/sedes').all(verifyJWTToken);
   app.route('/api/v1/private/sedes/:nombre').put(verifyJWTToken);
   app.route('/api/v1/private/sedes/:nombre').delete(verifyJWTToken);
 
   app.route('/api/v1/private/sedes/:nombre').put(verifyJWTToken);
   app.route('/api/v1/private/sedes/:nombre/usuarios').get(verifyJWTToken);
-  app.route(acl.authorize);
+  app.route('/api/v1/private/sedes').all(acl.authorize);
+  app.route('/api/v1/private/sedes/*').all(acl.authorize);
 
   // Sede Routes
   app.route('/api/v1/private/sedes')

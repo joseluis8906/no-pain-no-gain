@@ -7,10 +7,11 @@ module.exports = function(app) {
   var ciudadController = require('../controllers/ciudadController');
 
   // routes session required
-  app.route('/api/v1/private/ciudades').post(verifyJWTToken);
+  app.route('/api/v1/private/ciudades').all(verifyJWTToken);
   app.route('/api/v1/private/ciudades/:nombre').put(verifyJWTToken);
   app.route('/api/v1/private/ciudades/:nombre').delete(verifyJWTToken);
   app.route('/api/v1/private/ciudades').all(acl.authorize);
+  app.route('/api/v1/private/ciudades/*').all(acl.authorize);
 
   // ciudad Routes
   app.route('/api/v1/private/ciudades')
