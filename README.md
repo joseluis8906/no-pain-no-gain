@@ -43,5 +43,5 @@ Para ejecutar el api-service
 
 6). Consultar la lista de usuarios con el metodo sede/getUsuarios
 
--- Aclaración:
+# --Nota:
 Si al realizar una petición recibe una respuesta de permision denied, verifique que el la petición envía el header x-access-token y que el token fue generado con un usuario de role='admin'
