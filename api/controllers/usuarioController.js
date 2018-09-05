@@ -20,7 +20,6 @@ exports.create = function(req, res) {
   console.log('Usuarios create');
   var new_usuario = new Usuario(req.body);
   new_usuario._id = mongoose.Types.ObjectId();
-  //new_usuario.roles = ['user'];
   new_usuario.save(function(err, usuario) {
     if (err)
       res.send(err);

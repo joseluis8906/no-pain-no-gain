@@ -18,10 +18,6 @@ exports.listAll = function(req, res) {
 // crear una ciudad
 exports.create = function(req, res) {
   console.log('Ciudades create');
-  if(req.get('session') === undefined || req.get('session') === null){
-    res.json(null);
-    return;
-  }
   var new_ciudad = new Ciudad(req.body);
   new_ciudad._id = mongoose.Types.ObjectId();
   new_ciudad.save(function(err, ciudad) {
